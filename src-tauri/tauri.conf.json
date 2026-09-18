@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "pixel-color-pick",
+  "productName": "AF Color Picker",
   "version": "0.1.0",
   "identifier": "af.forge.pixel-color-pick",
   "build": {
@@ -12,9 +12,23 @@
   "app": {
     "windows": [
       {
-        "title": "pixel-color-pick",
+        "label": "main",
+        "title": "AF Color Picker",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "center": true
+      },
+      {
+        "label": "screen-picker",
+        "title": "AF Color Picker — Pick a Color",
+        "url": "index.html",
+        "visible": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "fullscreen": true,
+        "resizable": false
       }
     ],
     "security": {
@@ -22,8 +36,9 @@
     }
   },
   "bundle": {
+    "publisher": "Ali Fahs",
+    "targets": ["nsis"],
     "active": true,
-    "targets": "all",
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",

@@ -1,0 +1,20 @@
+.alpha-control {
+    margin-top: 20px;
+}
+
+.alpha-control__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 9px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.alpha-control input {
+    width: 100%;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}

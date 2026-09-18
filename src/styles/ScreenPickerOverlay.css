@@ -1,0 +1,89 @@
+.screen-picker-overlay {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    cursor: crosshair;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.screen-picker-overlay__hint {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 13px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: var(--radius-md);
+    background: rgba(16, 17, 22, 0.82);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    pointer-events: none;
+    text-align: center;
+}
+
+.screen-picker-overlay__hint strong {
+    font-size: 14px;
+}
+
+.screen-picker-overlay__hint span {
+    color: #b7bac6;
+    font-size: 12px;
+}
+
+.screen-picker-overlay__lens {
+    position: fixed;
+    z-index: 2;
+    width: 202px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: var(--radius-md);
+    background: rgba(16, 17, 22, 0.93);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.screen-picker-overlay__pixel-grid {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.screen-picker-overlay__pixel {
+    aspect-ratio: 1;
+}
+
+.screen-picker-overlay__pixel--center {
+    position: relative;
+    z-index: 1;
+    outline: 2px solid #ffffff;
+    outline-offset: -2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.7);
+}
+
+.screen-picker-overlay__lens-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.screen-picker-overlay__preview-swatch {
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+}
+
+.screen-picker-overlay__lens-details strong {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+}
+
+.screen-picker-overlay__lens-help {
+    display: block;
+    margin-top: 8px;
+    color: #b7bac6;
+    font-size: 11px;
+}

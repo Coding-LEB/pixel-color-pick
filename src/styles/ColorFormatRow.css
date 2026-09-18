@@ -1,0 +1,67 @@
+.color-format-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 13px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-app-bg);
+    color: inherit;
+    text-align: left;
+    transition:
+            border-color 160ms ease,
+            background 160ms ease,
+            transform 160ms ease;
+}
+
+.color-format-row:hover {
+    border-color: var(--color-primary);
+    background: var(--color-surface-hover);
+}
+
+.color-format-row:active {
+    transform: scale(0.99);
+}
+
+.color-format-row:focus-visible {
+    outline: 3px solid rgba(129, 140, 248, 0.25);
+    outline-offset: 2px;
+}
+
+.color-format-row--copied {
+    border-color: #4ade80;
+}
+
+.color-format-row__label {
+    min-width: 42px;
+    color: var(--color-text-muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.color-format-row__value {
+    overflow: hidden;
+    flex: 1;
+    color: var(--color-text);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.color-format-row__action {
+    min-width: 42px;
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 800;
+    text-align: right;
+}
+
+.color-format-row--copied .color-format-row__action {
+    color: #4ade80;
+}
